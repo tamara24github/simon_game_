@@ -15,17 +15,8 @@ $(document).keypress(function(){
       $("#level-title").text("level " + level);
       nextSequence();
       start = true;
-  }
-  
+  }  
 })
-
-// Sound
-
-
-function playSound(name){
-  var audio = new Audio("sounds/"+ name + ".mp3");
-  audio.play();
-}
 
 
 // Game
@@ -44,7 +35,6 @@ function nextSequence(){
     $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColour);
    
-
 }
 
 // User 
@@ -71,7 +61,6 @@ function playSound(name){
 // Animation 
 
 
-
 function animatePress(currentColour){
   $("#"+ currentColour).addClass("pressed");
 
@@ -79,9 +68,6 @@ function animatePress(currentColour){
     $("#"+ currentColour).removeClass("pressed");
   },100);
 }
-
-
-
 
 
 // Compare Answers
